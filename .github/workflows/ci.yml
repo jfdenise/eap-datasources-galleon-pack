@@ -6,7 +6,7 @@ name: EAP datasources and drivers Galleon feature-pack - CI
 on:
   push:
     branches:
-      - '**'
+      - main
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
 
