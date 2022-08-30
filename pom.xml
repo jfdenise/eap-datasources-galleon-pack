@@ -46,6 +46,15 @@
         <version.org.jboss.jboss-dmr>1.5.1.Final-redhat-00001</version.org.jboss.jboss-dmr>
         <version.org.wildfly.core>19.0.0.Beta-redhat-20220823</version.org.wildfly.core>
         <version.org.wildfly.galleon-plugins>6.0.0.Alpha7</version.org.wildfly.galleon-plugins>
+        
+        <!-- channels properties -->
+        <feature-pack.artifactId>eap-datasources-galleon-pack</feature-pack.artifactId>
+        <channel.schema>1.0.0</channel.schema>
+        <channel.name>Channel for EAP 8 Beta datasources feature-pack.</channel.name>
+        <channel.description>${channel.name}</channel.description>
+        <eap.channel.groupId>org.jboss.eap.channels</eap.channel.groupId>
+        <eap.channel.artifactId>eap-8.0-beta</eap.channel.artifactId>
+        
         <jbossas.repo.scm.connection>git@github.com:jbossas/eap-datasources-galleon-pack.git</jbossas.repo.scm.connection>
         <jbossas.repo.scm.url>https://github.com/jbossas/eap-datasources-galleon-pack</jbossas.repo.scm.url>   
     </properties>

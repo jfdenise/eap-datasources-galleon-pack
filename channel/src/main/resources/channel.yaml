@@ -1,0 +1,11 @@
+---
+schemaVersion: "${channel.schema}"
+name: "${channel.name}"
+description: "${channel.description}"
+requires:
+  - groupId: "${eap.channel.groupId}"
+    artifactId: "${eap.channel.artifactId}"
+streams:
+  - groupId: "${project.groupId}"
+    artifactId: "${feature-pack.artifactId}"
+    version: "${project.version}"
