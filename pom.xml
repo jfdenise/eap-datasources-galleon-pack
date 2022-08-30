@@ -41,11 +41,11 @@
     <properties>
         <version.junit>4.13.2</version.junit>
         <version.org.codehaus.mojo.properties-maven-plugin>1.0.0</version.org.codehaus.mojo.properties-maven-plugin>
-        <version.org.jboss.eap>8.0.0.Beta-redhat-20220408</version.org.jboss.eap>
-        <version.org.jboss.galleon>4.2.8.Final</version.org.jboss.galleon>
+        <version.org.jboss.eap>8.0.0.Beta-redhat-20220823</version.org.jboss.eap>
+        <version.org.jboss.galleon>5.0.5.Final</version.org.jboss.galleon>
         <version.org.jboss.jboss-dmr>1.5.1.Final-redhat-00001</version.org.jboss.jboss-dmr>
-        <version.org.wildfly.core>19.0.0.Beta6</version.org.wildfly.core>
-        <version.org.wildfly.galleon-plugins>5.2.11.Final</version.org.wildfly.galleon-plugins>
+        <version.org.wildfly.core>19.0.0.Beta-redhat-20220823</version.org.wildfly.core>
+        <version.org.wildfly.galleon-plugins>6.0.0.Alpha7</version.org.wildfly.galleon-plugins>
         <jbossas.repo.scm.connection>git@github.com:jbossas/eap-datasources-galleon-pack.git</jbossas.repo.scm.connection>
         <jbossas.repo.scm.url>https://github.com/jbossas/eap-datasources-galleon-pack</jbossas.repo.scm.url>   
     </properties>
@@ -105,6 +105,7 @@
     <modules>
         <module>galleon-feature-pack</module>
         <module>testsuite</module>
+        <module>channel</module>
     </modules>
 
     <repositories>
