@@ -26,7 +26,7 @@
     </parent>
     <groupId>org.jboss.eap</groupId>
     <artifactId>eap-datasources-galleon-pack-parent</artifactId>
-    <version>7.4.0.GA-redhat-SNAPSHOT</version>
+    <version>8.0.0.Beta1-redhat-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Drivers and datasources for JBoss Entreprise Application Platform parent</name>
     <description>Drivers and datasources for JBoss Entreprise Application Platform parent</description>
