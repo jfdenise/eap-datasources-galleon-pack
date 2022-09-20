@@ -45,7 +45,7 @@
         <version.junit>4.13.2</version.junit>
         <version.org.codehaus.mojo.properties-maven-plugin>1.0.0</version.org.codehaus.mojo.properties-maven-plugin>
         <version.org.jboss.eap>8.0.0.Beta-redhat-20220907</version.org.jboss.eap>
-        <version.org.jboss.galleon>5.0.5.Final</version.org.jboss.galleon>
+        <version.org.jboss.eap.maven.plugin>1.0.0.Beta3-redhat-00001</version.org.jboss.eap.maven.plugin>
         <version.org.jboss.jboss-dmr>1.5.1.Final-redhat-00001</version.org.jboss.jboss-dmr>
         <version.org.wildfly.core>19.0.0.Beta16-redhat-00002</version.org.wildfly.core>
         <version.org.wildfly.galleon-plugins>6.1.0.Final</version.org.wildfly.galleon-plugins>
@@ -87,9 +87,9 @@
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>org.jboss.galleon</groupId>
-                    <artifactId>galleon-maven-plugin</artifactId>
-                    <version>${version.org.jboss.galleon}</version>
+                    <groupId>org.jboss.eap.plugins</groupId>
+                    <artifactId>eap-maven-plugin</artifactId>
+                    <version>${version.org.jboss.eap.maven.plugin}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.wildfly.galleon-plugins</groupId>

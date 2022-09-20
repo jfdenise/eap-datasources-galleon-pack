@@ -68,7 +68,7 @@
                     <failIfNoTests>false</failIfNoTests>
                     <redirectTestOutputToFile>${testLogToFile}</redirectTestOutputToFile>
                     <systemPropertyVariables>
-                        <jboss.home>${basedir}/target/jboss-eap</jboss.home>
+                        <jboss.home>${basedir}/target/server</jboss.home>
                         <management.address>${management.address}</management.address>
                         <jboss.args>${jboss.args}</jboss.args>
                     </systemPropertyVariables>
