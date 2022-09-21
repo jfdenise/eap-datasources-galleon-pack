@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.jboss.eap</groupId>
         <artifactId>eap-datasources-galleon-pack-parent</artifactId>
-        <version>7.4.0.GA-redhat-SNAPSHOT</version>
+        <version>8.0.0.Beta1-redhat-SNAPSHOT</version>
     </parent>
     <artifactId>eap-datasources-galleon-pack-testsuite-parent</artifactId>
     <packaging>pom</packaging>
@@ -68,7 +68,7 @@
                     <failIfNoTests>false</failIfNoTests>
                     <redirectTestOutputToFile>${testLogToFile}</redirectTestOutputToFile>
                     <systemPropertyVariables>
-                        <jboss.home>${basedir}/target/jboss-eap</jboss.home>
+                        <jboss.home>${basedir}/target/server</jboss.home>
                         <management.address>${management.address}</management.address>
                         <jboss.args>${jboss.args}</jboss.args>
                     </systemPropertyVariables>

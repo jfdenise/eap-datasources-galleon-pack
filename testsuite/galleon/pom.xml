@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.jboss.eap</groupId>
         <artifactId>eap-datasources-galleon-pack-testsuite-parent</artifactId>
-        <version>7.4.0.GA-redhat-SNAPSHOT</version>
+        <version>8.0.0.Beta1-redhat-SNAPSHOT</version>
     </parent>
     <artifactId>eap-datasources-galleon-pack-testsuite</artifactId>
     <name>Drivers and datasources for JBoss Entreprise Application Platform galleon testsuite</name>
@@ -104,8 +104,8 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.jboss.galleon</groupId>
-                <artifactId>galleon-maven-plugin</artifactId>
+                <groupId>org.jboss.eap.plugins</groupId>
+                <artifactId>eap-maven-plugin</artifactId>
                 <configuration>
                     <feature-packs>
                         <feature-pack>
@@ -119,29 +119,23 @@
                             <version>${project.version}</version>
                         </feature-pack>
                     </feature-packs>
-                    <configurations>
-                        <config>
-                            <model>standalone</model>
-                            <name>standalone.xml</name>
-                            <layers>
-                                <layer>datasources-web-server</layer>
-                                <layer>oracle-datasource</layer>
-                                <layer>postgresql-datasource</layer>
-                                <layer>mssqlserver-datasource</layer>
-                            </layers>
-                        </config>
-                    </configurations>
-                    <install-dir>${project.build.directory}/jboss-eap</install-dir>
-                    <plugin-options>
+                    <layers>
+                        <layer>datasources-web-server</layer>
+                        <layer>oracle-datasource</layer>
+                        <layer>postgresql-datasource</layer>
+                        <layer>mssqlserver-datasource</layer>
+                    </layers>
+                    <galleon-options>
                         <jboss-fork-embedded>${plugin.fork.embedded}</jboss-fork-embedded>
-                    </plugin-options>
+                    </galleon-options>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>provision-server</id>
+                        <id>package-server</id>
                         <goals>
-                            <goal>provision</goal>
+                            <goal>package</goal>
                         </goals>
+                        <phase>test-compile</phase>
                     </execution>
                 </executions>
             </plugin>
