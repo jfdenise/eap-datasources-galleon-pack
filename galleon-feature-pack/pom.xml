@@ -49,7 +49,8 @@
                         </goals>
                         <phase>compile</phase>
                         <configuration>
-                            <translate-to-fpl>true</translate-to-fpl>
+                            <generate-channel>true</generate-channel>
+                            <add-feature-packs-as-required-channels>false</add-feature-packs-as-required-channels>
                         </configuration>
                     </execution>
                 </executions>
