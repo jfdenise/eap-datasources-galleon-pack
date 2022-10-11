@@ -107,6 +107,12 @@ Optional configuration
   * Required: True if `POSTGRESQL_URL` is not set.
   * System Property: `org.jboss.eap.datasources.postgresql.host`
 
+* `POSTGRESQL_IDLE_TIMEOUT_MINUTES`
+
+  * Description: Specifies the maximum time, in minutes, a connection may be idle before being closed.
+  * Default Value:`30`
+  * System Property: `org.jboss.eap.datasources.postgresql.idle-timeout-minutes`
+
 * `POSTGRESQL_JNDI`
 
   * Description: Defines the JNDI name for the datasource.
