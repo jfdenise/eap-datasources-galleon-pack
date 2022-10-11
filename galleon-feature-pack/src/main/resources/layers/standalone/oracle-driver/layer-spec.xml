@@ -4,12 +4,12 @@
         <feature spec="subsystem.datasources.jdbc-driver">
             <param name="driver-name" value="oracle"/>
             <param name="jdbc-driver" value="oracle"/>
-            <param name="driver-xa-datasource-class-name" value="oracle.jdbc.xa.client.OracleXADataSource"/>
-            <param name="driver-module-name" value="com.oracle.ojdbc"/>
+            <param name="driver-xa-datasource-class-name" value="${org.jboss.eap.datasources.oracle.driver.xa.datasource.class.name,env.ORACLE_DRIVER_XA_DATASOURCE_CLASS_NAME:oracle.jdbc.xa.client.OracleXADataSource}"/>
+            <param name="driver-module-name" value="com.oracle.database.jdbc"/>
         </feature>
     </feature>
     <packages>
-        <package name="com.oracle.ojdbc"/>
+        <package name="com.oracle.database.jdbc"/>
     </packages>
 </layer-spec>
 

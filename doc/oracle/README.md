@@ -2,7 +2,7 @@ Galleon Layers
 =========
 
 * `oracle-datasource`: Provision the `OracleDS` non xa datasource. Depends on `oracle-driver` layer.
-* `oracle-driver`: Provision the `oracle` driver. This layer installs the JBoss Modules module `com.oracle.ojdbc`.
+* `oracle-driver`: Provision the `oracle` driver. This layer installs the JBoss Modules module `com.oracle.database.jdbc`.
 
 Build time configuration
 ===============
@@ -14,10 +14,30 @@ Required configuration
 
 * `ORACLE_DRIVER_VERSION`
 
-  * Description: The version of the `com.oracle.ojdbc:ojdbc8` Maven artifact.
+  * Description: The version of the `com.oracle.database.jdbc:ojdbc8` Maven artifact.
   * No default value.
   * Required: True
   * System Property: `org.jboss.eap.datasources.oracle.driver.version`
+
+Optional configuration
+--------------------------------
+
+Configuration that can be provided when provisioning the Galleon feature-pack.
+
+* `ORACLE_DRIVER_ARTIFACT_ID`
+
+  * Description: The artifactId of the driver Maven artifact.
+  * Default value: `ojdbc8`
+  * Required: False
+  * System Property: `org.jboss.eap.datasources.oracle.driver.artifactId`
+
+* `ORACLE_DRIVER_GROUP_ID`
+
+  * Description: The groupId of the driver Maven artifact.
+  * Default value: `com.oracle.database.jdbc`
+  * Required: False
+  * System Property: `org.jboss.eap.datasources.oracle.driver.groupId`
+
 
 Runtime Configuration
 ==============
@@ -74,6 +94,12 @@ Optional configuration
   * Description: Datasource name used in the `jndi-name`.
   * Default Value: `OracleDS`
   * System Property: `org.jboss.eap.datasources.oracle.datasource`
+
+* `ORACLE_DRIVER_XA_DATASOURCE_CLASS_NAME`
+
+  * Description: The driver `driver-xa-datasource-class-name` attribute value.  
+  * Default Value: `oracle.jdbc.xa.client.OracleXADataSource`
+  * System Property: `org.jboss.eap.datasources.oracle.driver.xa.datasource.class.name`
 
 * `ORACLE_ENABLED`
 
