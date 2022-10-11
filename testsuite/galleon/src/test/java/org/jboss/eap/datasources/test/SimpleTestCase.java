@@ -91,6 +91,7 @@ public class SimpleTestCase {
 
         COMMON_DEFAULT_VALUES.put("background-validation", "false");
         COMMON_DEFAULT_VALUES.put("background-validation-millis", "10000");
+        COMMON_DEFAULT_VALUES.put("idle-timeout-minutes", "30");
         COMMON_DEFAULT_VALUES.put("enabled", "true");
         COMMON_DEFAULT_VALUES.put("jta", "true");
         COMMON_DEFAULT_VALUES.put("max-pool-size", "20");
@@ -133,6 +134,7 @@ public class SimpleTestCase {
 
         SYSTEM_PROPERTIES_VALUES.put("org.jboss.eap.datasources." + PLACE_HOLDER + ".enabled", "false");
         SYSTEM_PROPERTIES_VALUES.put("org.jboss.eap.datasources." + PLACE_HOLDER + ".exception-sorter-class-name", "foo");
+        SYSTEM_PROPERTIES_VALUES.put("org.jboss.eap.datasources." + PLACE_HOLDER + ".idle-timeout-minutes", "60");
         SYSTEM_PROPERTIES_VALUES.put("org.jboss.eap.datasources." + PLACE_HOLDER + ".jndi-name", "bar");
 
         SYSTEM_PROPERTIES_VALUES.put("org.jboss.eap.datasources." + PLACE_HOLDER + ".jta", "false");
@@ -160,6 +162,7 @@ public class SimpleTestCase {
 
         ENV_TO_ATTRIBUTE.put("_ENABLED", "enabled");
         ENV_TO_ATTRIBUTE.put("_EXCEPTION_SORTER", "exception-sorter-class-name");
+        ENV_TO_ATTRIBUTE.put("_IDLE_TIMEOUT_MINUTES", "idle-timeout-minutes");
         ENV_TO_ATTRIBUTE.put("_JNDI", "jndi-name");
         ENV_TO_ATTRIBUTE.put("_JTA", "jta");
         ENV_TO_ATTRIBUTE.put("_MAX_POOL_SIZE", "max-pool-size");
