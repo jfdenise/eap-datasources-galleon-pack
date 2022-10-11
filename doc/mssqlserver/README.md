@@ -140,6 +140,12 @@ Optional configuration
   * Required: True if `MSSQLSERVER_URL` is not set.
   * System Property: `org.jboss.eap.datasources.mssqlserver.port`
 
+* `MSSQLSERVER_IDLE_TIMEOUT_MINUTES`
+
+  * Description: Specifies the maximum time, in minutes, a connection may be idle before being closed.
+  * Default Value:`30`
+  * System Property: `org.jboss.eap.datasources.mssqlserver.idle-timeout-minutes`
+
 * `MSSQLSERVER_STALE_CONNECTION_CHECKER`
 
   * Description: Specifies a connection checker class that is used to check stale connections. Valid value: No checker provided by JBoss, only custom stale checker can be provided.

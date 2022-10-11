@@ -93,6 +93,12 @@ Optional configuration
   * Default Value: `FailingConnectionOnly`
   * System Property: `org.jboss.eap.datasources.oracle.flush-strategy`
 
+* `ORACLE_IDLE_TIMEOUT_MINUTES`
+
+  * Description: Specifies the maximum time, in minutes, a connection may be idle before being closed.
+  * Default Value:`30`
+  * System Property: `org.jboss.eap.datasources.oracle.idle-timeout-minutes`
+
 * `ORACLE_JNDI`
 
   * Description: Defines the JNDI name for the datasource.
