@@ -56,6 +56,11 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <scope>test</scope>
+        </dependency>
         <!-- For dependabot -->
         <dependency>
             <groupId>com.oracle.database.jdbc</groupId>
