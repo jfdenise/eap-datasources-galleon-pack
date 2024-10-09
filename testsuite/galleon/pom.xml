@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.jboss.eap</groupId>
         <artifactId>eap-datasources-galleon-pack-testsuite-parent</artifactId>
-        <version>8.0.0.Final-redhat-SNAPSHOT</version>
+        <version>8.0.1.Final-redhat-SNAPSHOT</version>
     </parent>
     <artifactId>eap-datasources-galleon-pack-testsuite</artifactId>
     <name>Drivers and datasources for JBoss Entreprise Application Platform galleon testsuite</name>
@@ -64,7 +64,7 @@
         <!-- For dependabot -->
         <dependency>
             <groupId>com.oracle.database.jdbc</groupId>
-            <artifactId>ojdbc8</artifactId>
+            <artifactId>ojdbc10</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>

@@ -14,7 +14,7 @@ Required configuration
 
 * `ORACLE_DRIVER_VERSION`
 
-  * Description: The version of the `com.oracle.database.jdbc:ojdbc8` Maven artifact.
+  * Description: The version of the `com.oracle.database.jdbc:ojdbc10` Maven artifact.
   * No default value.
   * Required: True
   * System Property: `org.jboss.eap.datasources.oracle.driver.version`
@@ -27,7 +27,7 @@ Configuration that can be provided when provisioning the Galleon feature-pack.
 * `ORACLE_DRIVER_ARTIFACT_ID`
 
   * Description: The artifactId of the driver Maven artifact.
-  * Default value: `ojdbc8`
+  * Default value: `ojdbc10`
   * Required: False
   * System Property: `org.jboss.eap.datasources.oracle.driver.artifactId`
 
