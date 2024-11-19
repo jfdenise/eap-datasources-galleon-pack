@@ -64,7 +64,7 @@
         <!-- For dependabot -->
         <dependency>
             <groupId>com.oracle.database.jdbc</groupId>
-            <artifactId>ojdbc10</artifactId>
+            <artifactId>ojdbc11</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
