@@ -2,6 +2,9 @@ repo:
   - ./*
 test:
   - testsuite/**/*
+db2:
+  - "**/db2/**/*"
+  - "**/db2-*/**/*"
 microsoft:
   - "**/mssqlserver*/**/*"
   - "**/microsoft/**/*"

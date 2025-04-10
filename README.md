@@ -36,6 +36,8 @@ For each database type it supports, the feature-pack provides 3 Galleon layers t
 
 The linked documentation provides information about how to configure each supported database type:
 
+* [DB2 driver and datasource](doc/db2/README.md)
+
 * [Microsoft SQL Server driver and datasource](doc/mssqlserver/README.md)
 
 * [Oracle driver and datasource](doc/oracle/README.md)
