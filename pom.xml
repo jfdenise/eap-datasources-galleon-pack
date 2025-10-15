@@ -45,11 +45,11 @@
         <version.junit>4.13.2</version.junit>
         <version.inject>1</version.inject>
         <version.org.codehaus.mojo.properties-maven-plugin>1.0.0</version.org.codehaus.mojo.properties-maven-plugin>
-        <version.org.jboss.eap>8.1.0.GA-redhat-00001</version.org.jboss.eap>
-        <version.org.jboss.eap.maven.plugin>2.0.0.Final-redhat-00001</version.org.jboss.eap.maven.plugin>
+        <version.org.jboss.eap>8.1.0.GA-redhat-00015</version.org.jboss.eap>
+        <version.org.jboss.eap.maven.plugin>2.0.0.Final-redhat-00009</version.org.jboss.eap.maven.plugin>
         <version.org.jboss.jboss-dmr>1.7.0.Final-redhat-00001</version.org.jboss.jboss-dmr>
-        <version.org.wildfly.core>27.1.0.Final-redhat-00001</version.org.wildfly.core>
-        <version.org.wildfly.galleon-plugins>7.3.1.Final</version.org.wildfly.galleon-plugins>
+        <version.org.wildfly.core>27.1.0.Final-redhat-00010</version.org.wildfly.core>
+        <version.org.wildfly.galleon-plugins>7.3.1.Final-redhat-00003</version.org.wildfly.galleon-plugins>
         <jbossas.repo.scm.connection>git@github.com:jbossas/eap-datasources-galleon-pack.git</jbossas.repo.scm.connection>
         <jbossas.repo.scm.url>https://github.com/jbossas/eap-datasources-galleon-pack</jbossas.repo.scm.url>   
     </properties>
