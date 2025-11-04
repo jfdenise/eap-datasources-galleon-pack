@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.jboss.eap</groupId>
         <artifactId>eap-datasources-galleon-pack-testsuite-parent</artifactId>
-        <version>8.1.1.Final-redhat-SNAPSHOT</version>
+        <version>8.2.0.Final-redhat-SNAPSHOT</version>
     </parent>
     <artifactId>eap-datasources-galleon-pack-testsuite</artifactId>
     <name>Drivers and datasources for JBoss Entreprise Application Platform galleon testsuite</name>
@@ -121,7 +121,7 @@
                 <groupId>org.jboss.eap.plugins</groupId>
                 <artifactId>eap-maven-plugin</artifactId>
                 <configuration>
-                  <channels>
+                  <!--<channels>
                     <channel>
                       <manifest>
                         <groupId>org.jboss.eap.channels</groupId>
@@ -135,16 +135,18 @@
                         <version>${project.version}</version>
                       </manifest>
                     </channel>
-                  </channels>
+                  </channels> -->
                     <recordProvisioningState>true</recordProvisioningState>
                     <feature-packs>
                         <feature-pack>
                             <groupId>org.jboss.eap</groupId>
                             <artifactId>wildfly-ee-galleon-pack</artifactId>
+                            <version>${version.org.jboss.eap}</version>
                         </feature-pack>
                         <feature-pack>
                             <groupId>${project.groupId}</groupId>
                             <artifactId>eap-datasources-galleon-pack</artifactId>
+                            <version>${project.version}</version>
                         </feature-pack>
                     </feature-packs>
                     <layers>

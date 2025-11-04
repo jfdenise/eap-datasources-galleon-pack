@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.jboss.eap</groupId>
         <artifactId>eap-datasources-galleon-pack-parent</artifactId>
-        <version>8.1.1.Final-redhat-SNAPSHOT</version>
+        <version>8.2.0.Final-redhat-SNAPSHOT</version>
     </parent>
     <artifactId>eap-datasources-galleon-pack-testsuite-parent</artifactId>
     <packaging>pom</packaging>
@@ -33,10 +33,10 @@
         <jboss.args>--start-mode=admin-only</jboss.args>
         <management.address>${node0}</management.address>
         <node0>127.0.0.1</node0>
-        <org.jboss.eap.datasources.mssqlserver.driver.version>10.2.4.jre8</org.jboss.eap.datasources.mssqlserver.driver.version>
-        <org.jboss.eap.datasources.oracle.driver.version>23.6.0.24.10</org.jboss.eap.datasources.oracle.driver.version>
-        <org.jboss.eap.datasources.postgresql.driver.version>42.2.20</org.jboss.eap.datasources.postgresql.driver.version>
-        <org.jboss.eap.datasources.db2.driver.version>12.1.2.0</org.jboss.eap.datasources.db2.driver.version>
+        <org.jboss.eap.datasources.mssqlserver.driver.version>13.2.1.jre11</org.jboss.eap.datasources.mssqlserver.driver.version>
+        <org.jboss.eap.datasources.oracle.driver.version>23.26.0.0.0</org.jboss.eap.datasources.oracle.driver.version>
+        <org.jboss.eap.datasources.postgresql.driver.version>42.7.9</org.jboss.eap.datasources.postgresql.driver.version>
+        <org.jboss.eap.datasources.db2.driver.version>12.1.3.0</org.jboss.eap.datasources.db2.driver.version>
         <testLogToFile>true</testLogToFile>
     </properties>
 
