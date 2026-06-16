@@ -7,6 +7,9 @@
       <prop name="org.wildfly.rule.annotation.field.value-url" value="jakarta.annotation.sql.DataSourceDefinition,url=jdbc:oracle:*"/>
       <prop name="org.wildfly.rule.annotation.field.value-className" value="jakarta.annotation.sql.DataSourceDefinition,className=oracle.jdbc.*"/>
     </props>
+    <dependencies>
+      <layer name="datasources"/>
+    </dependencies>
     <feature spec="subsystem.datasources">
         <feature spec="subsystem.datasources.jdbc-driver">
             <param name="driver-name" value="oracle"/>

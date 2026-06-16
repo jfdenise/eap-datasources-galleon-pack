@@ -9,6 +9,7 @@
       <prop name="org.wildfly.rule.add-on-depends-on" value="only:datasources"/>
     </props>
     <dependencies>
+        <layer name="datasources"/>
         <layer name="db2-driver"/>
     </dependencies>
     
