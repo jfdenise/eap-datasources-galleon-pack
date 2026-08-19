@@ -37,6 +37,7 @@
         <org.jboss.eap.datasources.oracle.driver.version>23.26.1.0.0</org.jboss.eap.datasources.oracle.driver.version>
         <org.jboss.eap.datasources.postgresql.driver.version>42.7.12</org.jboss.eap.datasources.postgresql.driver.version>
         <org.jboss.eap.datasources.db2.driver.version>12.1.4.0</org.jboss.eap.datasources.db2.driver.version>
+        <org.jboss.eap.datasources.mysql.driver.version>9.7.0</org.jboss.eap.datasources.mysql.driver.version>
         <testLogToFile>true</testLogToFile>
     </properties>
 
@@ -61,6 +62,11 @@
                 <groupId>com.ibm.db2</groupId>
                 <artifactId>jcc</artifactId>
                 <version>${org.jboss.eap.datasources.db2.driver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${org.jboss.eap.datasources.mysql.driver.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

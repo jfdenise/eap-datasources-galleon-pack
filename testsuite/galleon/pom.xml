@@ -82,6 +82,11 @@
             <artifactId>jcc</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>test</scope>
+        </dependency>
         <!-- end for dependabot -->
     </dependencies>
     <build>                
@@ -111,6 +116,10 @@
                                 <property>
                                     <name>org.jboss.eap.datasources.db2.driver.version</name>
                                     <value>${org.jboss.eap.datasources.db2.driver.version}</value>
+                                </property>
+                                <property>
+                                    <name>org.jboss.eap.datasources.mysql.driver.version</name>
+                                    <value>${org.jboss.eap.datasources.mysql.driver.version}</value>
                                 </property>
                             </properties>
                         </configuration>
@@ -155,6 +164,7 @@
                         <layer>postgresql-datasource</layer>
                         <layer>mssqlserver-datasource</layer>
                         <layer>db2-datasource</layer>
+                        <layer>mysql-datasource</layer>
                     </layers>
                     <galleon-options>
                         <jboss-fork-embedded>${plugin.fork.embedded}</jboss-fork-embedded>
@@ -262,6 +272,24 @@
                                         <DB2_CONNECTION_CHECKER>envfoochecker</DB2_CONNECTION_CHECKER>
                                         <DB2_TX_ISOLATION>TRANSACTION_READ_UNCOMMITTED</DB2_TX_ISOLATION>
                                         <DB2_FLUSH_STRATEGY>IdleConnections</DB2_FLUSH_STRATEGY>
+
+                                        <MYSQL_ENABLED>false</MYSQL_ENABLED>
+                                        <MYSQL_EXCEPTION_SORTER>envfoo</MYSQL_EXCEPTION_SORTER>
+                                        <MYSQL_IDLE_TIMEOUT_MINUTES>40</MYSQL_IDLE_TIMEOUT_MINUTES>
+                                        <MYSQL_JNDI>envbar</MYSQL_JNDI>
+                                        <MYSQL_JTA>false</MYSQL_JTA>
+                                        <MYSQL_MAX_POOL_SIZE>8888</MYSQL_MAX_POOL_SIZE>
+                                        <MYSQL_MIN_POOL_SIZE>77</MYSQL_MIN_POOL_SIZE>
+                                        <MYSQL_URL>envfoourl</MYSQL_URL>
+                                        <MYSQL_USER>envfoouser</MYSQL_USER>
+                                        <MYSQL_PASSWORD>envfoopassword</MYSQL_PASSWORD>
+                                        <MYSQL_VALIDATE_ON_MATCH>false</MYSQL_VALIDATE_ON_MATCH>
+                                        <MYSQL_BACKGROUND_VALIDATION>true</MYSQL_BACKGROUND_VALIDATION>
+                                        <MYSQL_BACKGROUND_VALIDATION_MILLIS>7</MYSQL_BACKGROUND_VALIDATION_MILLIS>
+                                        <MYSQL_STALE_CONNECTION_CHECKER>envfoostalechecker</MYSQL_STALE_CONNECTION_CHECKER>
+                                        <MYSQL_CONNECTION_CHECKER>envfoochecker</MYSQL_CONNECTION_CHECKER>
+                                        <MYSQL_TX_ISOLATION>TRANSACTION_READ_UNCOMMITTED</MYSQL_TX_ISOLATION>
+                                        <MYSQL_FLUSH_STRATEGY>IdleConnections</MYSQL_FLUSH_STRATEGY>
                                     </environmentVariables>
                                 </configuration>
                              </execution>
@@ -291,6 +319,11 @@
                                         <DB2_PORT>envfooport</DB2_PORT>
                                         <DB2_DATABASE>envbardatabase</DB2_DATABASE>
                                         <DB2_DATASOURCE>envbardatasource</DB2_DATASOURCE>
+
+                                        <MYSQL_HOST>envfoohost</MYSQL_HOST>
+                                        <MYSQL_PORT>envfooport</MYSQL_PORT>
+                                        <MYSQL_DATABASE>envbardatabase</MYSQL_DATABASE>
+                                        <MYSQL_DATASOURCE>envbardatasource</MYSQL_DATASOURCE>
                                     </environmentVariables>
                                 </configuration>
                              </execution>
@@ -320,6 +353,11 @@
                                         <DB2_SERVICE_PORT>envfooport</DB2_SERVICE_PORT>
                                         <DB2_DATABASE>envbardatabase</DB2_DATABASE>
                                         <DB2_DATASOURCE>envbardatasource</DB2_DATASOURCE>
+
+                                        <MYSQL_SERVICE_HOST>envfoohost</MYSQL_SERVICE_HOST>
+                                        <MYSQL_SERVICE_PORT>envfooport</MYSQL_SERVICE_PORT>
+                                        <MYSQL_DATABASE>envbardatabase</MYSQL_DATABASE>
+                                        <MYSQL_DATASOURCE>envbardatasource</MYSQL_DATASOURCE>
                                     </environmentVariables>
                                 </configuration>
                              </execution>

@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:2.0" name="mysql-driver">
+    <props>
+      <prop name="org.wildfly.category" value="Database"/>
+      <prop name="org.wildfly.rule.xml-path" value="[/META-INF/*.xml,/WEB-INF/*.xml],/datasources/datasource/driver,mysql"/>
+      <prop name="org.wildfly.rule.xml-path-xa" value="[/META-INF/*.xml,/WEB-INF/*.xml],/datasources/xa-datasource/driver,mysql"/>
+      <prop name="org.wildfly.rule.annotation.field.value-url" value="jakarta.annotation.sql.DataSourceDefinition,url=jdbc:mysql:*"/>
+      <prop name="org.wildfly.rule.annotation.field.value-className" value="jakarta.annotation.sql.DataSourceDefinition,className=com.mysql.*"/>
+    </props>
+    <dependencies>
+        <layer name="datasources"/>
+    </dependencies>
+    <feature spec="subsystem.datasources">
+        <feature spec="subsystem.datasources.jdbc-driver">
+            <param name="driver-name" value="mysql"/>
+            <param name="jdbc-driver" value="mysql"/>
+            <param name="driver-xa-datasource-class-name" value="com.mysql.cj.jdbc.MysqlXADataSource"/>
+            <param name="driver-module-name" value="com.mysql.jdbc"/>
+        </feature>
+    </feature>
+    <packages>
+        <package name="com.mysql.jdbc"/>
+    </packages>
+</layer-spec>

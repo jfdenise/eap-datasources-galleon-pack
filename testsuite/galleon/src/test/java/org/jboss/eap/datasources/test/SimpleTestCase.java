@@ -43,6 +43,7 @@ public class SimpleTestCase {
     private static final String ORACLE_PREFIX = "ORACLE";
     private static final String POSTGRESQL_PREFIX = "POSTGRESQL";
     private static final String MSSQLSERVER_PREFIX = "MSSQLSERVER";
+    private static final String MYSQL_PREFIX = "MYSQL";
 
     private static final Map<String, String> ENV_VARIABLES_PREFIXES = new HashMap<>();
     private static final Map<String, String> DS_TO_PREFIX = new HashMap<>();
@@ -55,19 +56,21 @@ public class SimpleTestCase {
     private static final String ORACLE_DS = "OracleDS";
     private static final String POSTGRESQL_DS = "PostgreSQLDS";
     private static final String MSSQLSERVER_DS = "MSSQLServerDS";
-    
+    private static final String MYSQL_DS = "MySQLDS";
+
     private static final String DB2_DRIVER = "db2";
     private static final String ORACLE_DRIVER = "oracle";
     private static final String POSTGRESQL_DRIVER = "postgresql";
     private static final String MSSQLSERVER_DRIVER = "mssqlserver";
+    private static final String MYSQL_DRIVER = "mysql";
     
     private static final String PLACE_HOLDER = "XXX";
 
-    private static final String[] DATASOURCES = {DB2_DS, ORACLE_DS, POSTGRESQL_DS,MSSQLSERVER_DS};
+    private static final String[] DATASOURCES = {DB2_DS, ORACLE_DS, POSTGRESQL_DS, MSSQLSERVER_DS, MYSQL_DS};
     // These databases have host,port,database properties for connection-url
-    private static final String[] DATASOURCES_WITH_HPD = {DB2_DS, POSTGRESQL_DS,MSSQLSERVER_DS};
+    private static final String[] DATASOURCES_WITH_HPD = {DB2_DS, POSTGRESQL_DS, MSSQLSERVER_DS, MYSQL_DS};
 
-    private static final String[] DRIVERS = {DB2_DRIVER, ORACLE_DRIVER, POSTGRESQL_DRIVER, MSSQLSERVER_DRIVER};
+    private static final String[] DRIVERS = {DB2_DRIVER, ORACLE_DRIVER, POSTGRESQL_DRIVER, MSSQLSERVER_DRIVER, MYSQL_DRIVER};
     private static final String DATASOURCES_ADDRESS = "/subsystem=datasources/";
 
     private static final Map<String, Map<String, String>> SPECIFIC_DEFAULT_VALUES = new HashMap<>();
@@ -87,14 +90,17 @@ public class SimpleTestCase {
         DS_TO_SYSTEM_PROPERTY.put(ORACLE_DS, "oracle");
         DS_TO_SYSTEM_PROPERTY.put(POSTGRESQL_DS, "postgresql");
         DS_TO_SYSTEM_PROPERTY.put(MSSQLSERVER_DS, "mssqlserver");
+        DS_TO_SYSTEM_PROPERTY.put(MYSQL_DS, "mysql");
 
         CONNECTION_URL_PREFIX.put(DB2_DS, "jdbc:db2://");
         CONNECTION_URL_PREFIX.put(POSTGRESQL_DS, "jdbc:postgresql://");
         CONNECTION_URL_PREFIX.put(MSSQLSERVER_DS, "jdbc:sqlserver://");
-        
+        CONNECTION_URL_PREFIX.put(MYSQL_DS, "jdbc:mysql://");
+
         CONNECTION_URL_DB.put(DB2_DS, "/");
         CONNECTION_URL_DB.put(POSTGRESQL_DS, "/");
         CONNECTION_URL_DB.put(MSSQLSERVER_DS, ";DatabaseName=");
+        CONNECTION_URL_DB.put(MYSQL_DS, "/");
 
         COMMON_DEFAULT_VALUES.put("background-validation", "false");
         COMMON_DEFAULT_VALUES.put("background-validation-millis", "10000");
@@ -149,6 +155,16 @@ public class SimpleTestCase {
         db2.put("valid-connection-checker-class-name", "org.jboss.jca.adapters.jdbc.extensions.db2.DB2ValidConnectionChecker");
         db2.put("driver-name", DB2_DRIVER);
 
+        Map<String, String> mysql = new HashMap<>();
+        SPECIFIC_DEFAULT_VALUES.put(MYSQL_DS, mysql);
+        mysql.put("connection-url", "jdbc:mysql://localhost:3306/${org.jboss.eap.datasources.mysql.database,env.MYSQL_DATABASE}");
+        mysql.put("jndi-name", "java:jboss/datasources/MySQLDS");
+        mysql.put("password", "${org.jboss.eap.datasources.mysql.password,env.MYSQL_PASSWORD}");
+        mysql.put("user-name", "${org.jboss.eap.datasources.mysql.user-name,env.MYSQL_USER}");
+        mysql.put("exception-sorter-class-name", "org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter");
+        mysql.put("valid-connection-checker-class-name", "org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker");
+        mysql.put("driver-name", MYSQL_DRIVER);
+
         SYSTEM_PROPERTIES_VALUES.put("org.jboss.eap.datasources." + PLACE_HOLDER + ".enabled", "false");
         SYSTEM_PROPERTIES_VALUES.put("org.jboss.eap.datasources." + PLACE_HOLDER + ".exception-sorter-class-name", "foo");
         SYSTEM_PROPERTIES_VALUES.put("org.jboss.eap.datasources." + PLACE_HOLDER + ".idle-timeout-minutes", "60");
@@ -173,11 +189,13 @@ public class SimpleTestCase {
         ENV_VARIABLES_PREFIXES.put(ORACLE_PREFIX, ORACLE_DS);
         ENV_VARIABLES_PREFIXES.put(POSTGRESQL_PREFIX, POSTGRESQL_DS);
         ENV_VARIABLES_PREFIXES.put(MSSQLSERVER_PREFIX, MSSQLSERVER_DS);
+        ENV_VARIABLES_PREFIXES.put(MYSQL_PREFIX, MYSQL_DS);
 
         DS_TO_PREFIX.put(DB2_DS, DB2_PREFIX);
         DS_TO_PREFIX.put(ORACLE_DS, ORACLE_PREFIX);
         DS_TO_PREFIX.put(POSTGRESQL_DS, POSTGRESQL_PREFIX);
         DS_TO_PREFIX.put(MSSQLSERVER_DS, MSSQLSERVER_PREFIX);
+        DS_TO_PREFIX.put(MYSQL_DS, MYSQL_PREFIX);
 
         ENV_TO_ATTRIBUTE.put("_ENABLED", "enabled");
         ENV_TO_ATTRIBUTE.put("_EXCEPTION_SORTER", "exception-sorter-class-name");
