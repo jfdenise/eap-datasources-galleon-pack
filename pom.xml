@@ -45,11 +45,11 @@
         <version.junit>4.13.2</version.junit>
         <version.inject>1</version.inject>
         <version.org.codehaus.mojo.properties-maven-plugin>1.0.0</version.org.codehaus.mojo.properties-maven-plugin>
-        <version.org.jboss.eap>8.2.0.Alpha-redhat-00018</version.org.jboss.eap>
+        <version.org.jboss.eap>8.2.0.Beta-redhat-00009</version.org.jboss.eap>
         <version.org.jboss.eap.maven.plugin>3.0.0.Beta-redhat-00036</version.org.jboss.eap.maven.plugin>
         <version.org.jboss.jboss-dmr>1.7.0.Final-redhat-00001</version.org.jboss.jboss-dmr>
         <version.org.wildfly.core>32.0.0.Beta5-redhat-00001</version.org.wildfly.core>
-        <version.org.wildfly.galleon-plugins>8.1.5.Final</version.org.wildfly.galleon-plugins>
+        <version.org.wildfly.galleon-plugins>8.1.9.Final</version.org.wildfly.galleon-plugins>
         <!-- test dependencies -->
         <version.org.wildfy.glow>2.1.1.Final-redhat-00002</version.org.wildfy.glow>
         <version.jakarta.annotations>3.0.0</version.jakarta.annotations>
